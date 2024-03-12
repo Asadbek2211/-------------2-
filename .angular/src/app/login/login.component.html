@@ -1,0 +1,28 @@
+<div *ngIf="!authService.isLoggedIn()" class="container">
+    <form>
+        <div class="form">
+            <div style="text-align: center;" class="title">Login</div>
+            <div style="text-align: center;" class="subtitle">Sign up from here!</div>
+            <div class="input-container ic1">
+              <input id="username"  class="input"   type="text" placeholder="Enter your username" >
+              <div class="cut"></div>
+              <label for="firstname" class="placeholder"></label>
+            </div>
+            <div class="input-container ic2">
+              <input id="password" class="input"   type="text" placeholder="Enter your password" >
+              <div class="cut"></div>
+              <label for="lastname" class="placeholder"></label>
+            </div>
+
+            <button (click)="login()"  type="text" class="submit">Login</button>
+          </div>
+    </form>
+</div>
+<div *ngIf="authService.isLoggedIn()">
+
+  <h1>Welcome to Web-site</h1>
+
+ <button class="btn-2" (click)="logout()">Sign-out</button>
+
+
+</div>
